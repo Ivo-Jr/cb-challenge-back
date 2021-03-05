@@ -1,9 +1,10 @@
 import { Router } from 'express';
 
+import CourseController from './app/controllers/CourseController';
+
 const routes = new Router();
 
-routes.get('/', (request, response) =>
-  response.json({ message: 'Hello Junior ' })
-);
+routes.post('/courses', CourseController.store);
+routes.put('/courses', CourseController.update);
 
 export default routes;

@@ -1,12 +1,20 @@
 import jwt from 'jsonwebtoken';
 import * as Yup from 'yup';
 import Course from '../models/Course';
+import File from '../models/File';
 import authConfig from '../../config/auth';
 
 class CourseController {
   async index(request, response) {
     const findAll = await Course.findAll({
       attributes: ['id', 'name', 'category', 'url', 'avatar_id'],
+      include: [
+        {
+          model: File,
+          as: 'avatar',
+          attributes: ['name', 'path'],
+        },
+      ],
     });
 
     return response.json(findAll);

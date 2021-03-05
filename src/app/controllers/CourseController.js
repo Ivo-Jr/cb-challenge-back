@@ -4,6 +4,14 @@ import Course from '../models/Course';
 import authConfig from '../../config/auth';
 
 class CourseController {
+  async index(request, response) {
+    const findAll = await Course.findAll({
+      attributes: ['id', 'name', 'category', 'url', 'avatar_id'],
+    });
+
+    return response.json(findAll);
+  }
+
   async store(request, response) {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
@@ -21,7 +29,7 @@ class CourseController {
     });
 
     if (nameExists) {
-      return response.status(400).json({ error: 'Course Name alredy exists.' });
+      return response.status(400).json({ error: 'Course name alredy exists.' });
     }
 
     const { id, name, description, category, url } = await Course.create(

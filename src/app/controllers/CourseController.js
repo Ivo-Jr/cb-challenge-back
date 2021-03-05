@@ -1,9 +1,21 @@
 import jwt from 'jsonwebtoken';
+import * as Yup from 'yup';
 import Course from '../models/Course';
 import authConfig from '../../config/auth';
 
 class CourseController {
   async store(request, response) {
+    const schema = Yup.object().shape({
+      name: Yup.string().required(),
+      description: Yup.string().required(),
+      category: Yup.string().required(),
+      url: Yup.string().required(),
+    });
+
+    if (!(await schema.isValid(request.body))) {
+      return response.status(400).json({ error: 'Validation fails' });
+    }
+
     const nameExists = await Course.findOne({
       where: { name: request.body.name },
     });
@@ -29,7 +41,7 @@ class CourseController {
 
     const course = await Course.findByPk(request.courseId);
 
-    if (name !== course.name) {
+    if (name && name !== course.name) {
       const nameExists = await Course.findOne({
         where: { name },
       });

@@ -37,6 +37,17 @@ class CourseController {
   }
 
   async update(request, response) {
+    const schema = Yup.object().shape({
+      name: Yup.string(),
+      description: Yup.string(),
+      category: Yup.string(),
+      url: Yup.string(),
+    });
+
+    if (!(await schema.isValid(request.body))) {
+      return response.status(400).json({ error: 'Validation fails' });
+    }
+
     const { name } = request.body;
 
     const course = await Course.findByPk(request.courseId);
@@ -53,9 +64,11 @@ class CourseController {
       }
     }
 
-    const { id, description, url } = await course.update(request.body);
+    const { id, description, category, url } = await course.update(
+      request.body
+    );
 
-    return response.json({ id, name, description, url });
+    return response.json({ id, name, description, category, url });
   }
 }
 

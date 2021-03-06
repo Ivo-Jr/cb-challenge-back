@@ -7,7 +7,7 @@ import FileController from './app/controllers/FileController';
 import CategoryController from './app/controllers/CategoryController';
 import NameController from './app/controllers/NameController';
 
-import authMiddleware from './app/middleware/auth';
+// import authMiddleware from './app/middleware/auth';
 
 const routes = new Router();
 const upload = multer(multerConfig);
@@ -19,9 +19,9 @@ routes.get('/courses/category', CategoryController.index);
 routes.get('/courses/name', NameController.index);
 routes.delete('/courses/:id', CourseController.delete);
 
-routes.use(authMiddleware);
+// routes.use(authMiddleware);
 
-routes.put('/courses', CourseController.update);
+routes.put('/courses/:id', CourseController.update);
 
 routes.post('/files', upload.single('file'), FileController.store);
 

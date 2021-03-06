@@ -1,8 +1,8 @@
-import jwt from 'jsonwebtoken';
+// import jwt from 'jsonwebtoken';
 import * as Yup from 'yup';
 import Course from '../models/Course';
 import File from '../models/File';
-import authConfig from '../../config/auth';
+// import authConfig from '../../config/auth';
 
 class CourseController {
   async index(request, response) {
@@ -50,9 +50,9 @@ class CourseController {
 
     return response.json({
       course: { id, name, description, category, url },
-      token: jwt.sign({ id }, authConfig.secret, {
-        expiresIn: authConfig.expiresIn,
-      }),
+      // token: jwt.sign({ id }, authConfig.secret, {
+      //   expiresIn: authConfig.expiresIn,
+      // }),
     });
   }
 
@@ -71,7 +71,8 @@ class CourseController {
     const { name } = request.body;
 
     // const { id } = request.params
-    const course = await Course.findByPk(request.courseId);
+    // const course = await Course.findByPk(request.courseId);
+    const course = await Course.findByPk(request.params.id);
 
     if (name && name !== course.name) {
       const nameExists = await Course.findOne({
@@ -88,6 +89,8 @@ class CourseController {
     const { id, description, category, url } = await course.update(
       request.body
     );
+
+    await course.save();
 
     return response.json({ id, name, description, category, url });
   }

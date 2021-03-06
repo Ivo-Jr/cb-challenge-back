@@ -6,13 +6,17 @@ import authConfig from '../../config/auth';
 
 class CourseController {
   async index(request, response) {
+    const { page = 1 } = request.query;
+
     const findAll = await Course.findAll({
       attributes: ['id', 'name', 'category', 'url', 'avatar_id'],
+      limit: 3,
+      offset: (page - 1) * 3,
       include: [
         {
           model: File,
           as: 'avatar',
-          attributes: ['name', 'path'],
+          attributes: ['name', 'path', 'url'],
         },
       ],
     });

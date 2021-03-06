@@ -4,9 +4,10 @@ import File from '../models/File';
 class NameController {
   async index(request, response) {
     const { page = 1 } = request.query;
+    const { name } = request.query;
 
-    const nameCourse = await Course.findAll({
-      where: { name: 'Advocacia tributária' },
+    const courseName = await Course.findAll({
+      where: { name: `${name}` },
       attributes: ['id', 'name', 'category', 'url', 'avatar_id'],
       limit: 3,
       offset: (page - 1) * 3,
@@ -19,7 +20,7 @@ class NameController {
       ],
     });
 
-    return response.json(nameCourse);
+    return response.json(courseName);
   }
 }
 

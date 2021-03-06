@@ -17,6 +17,7 @@ routes.post('/courses', CourseController.store);
 routes.get('/courses', CourseController.index);
 routes.get('/courses/category', CategoryController.index);
 routes.get('/courses/name', NameController.index);
+routes.delete('/courses/:id', CourseController.delete);
 
 routes.use(authMiddleware);
 

@@ -70,6 +70,7 @@ class CourseController {
 
     const { name } = request.body;
 
+    // const { id } = request.params
     const course = await Course.findByPk(request.courseId);
 
     if (name && name !== course.name) {
@@ -89,6 +90,17 @@ class CourseController {
     );
 
     return response.json({ id, name, description, category, url });
+  }
+
+  async delete(request, response) {
+    const { id } = await Course.findByPk(request.params.id);
+
+    await Course.destroy({
+      where: { id },
+      force: true,
+    });
+
+    return response.json();
   }
 }
 

@@ -1,8 +1,6 @@
-// import jwt from 'jsonwebtoken';
 import * as Yup from 'yup';
 import Course from '../models/Course';
 import File from '../models/File';
-// import authConfig from '../../config/auth';
 
 class CourseController {
   async index(request, response) {

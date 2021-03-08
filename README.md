@@ -55,6 +55,7 @@ $ yarn or npm start
 ```bash
 # To monitor the handling of requests and responses, Install:
 - [Insomina](https://insomnia.rest/download)
+- [NodeJs](https://nodejs.org/en/)
 
 # To containerize the application install
 - [Docker](https://docs.docker.com/docker-hub/)

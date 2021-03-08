@@ -31,35 +31,11 @@ This project was developed with the following technologies:
 - [Prettier](https://prettier.io/)
 - [VS Code][vc] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
 
+
 ## :information_source: How To Use
 
 
----
-
-Made with ♥ by Ivo Junior :wave: [Get in touch!](https://www.linkedin.com/in/jos%C3%A9-ivo-maciel-j%C3%BAnior-658136145/)
-
-[nodejs]: https://nodejs.org/
-[yarn]: https://yarnpkg.com/
-[vc]: https://code.visualstudio.com/
-[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
-[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-
-
-
 To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v12.18.4][nodejs] or higher + [Yarn v1.22][yarn] or higher installed on your computer. From your command line:
-
-
-
----
-
-Made with ♥ by Ivo Júnior :wave: [Get in touch!](https://www.linkedin.com/in/jos%C3%A9-ivo-maciel-j%C3%BAnior-658136145/)
-
-[nodejs]: https://nodejs.org/
-[yarn]: https://yarnpkg.com/
-[vc]: https://code.visualstudio.com/
-[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
-[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-
 
 
 ```bash
@@ -74,6 +50,20 @@ $ yarn or npm install
 
 # Run the app
 $ yarn or npm start
+```
+
+```bash
+# To monitor the handling of requests and responses, Install:
+- Insomina(https://insomnia.rest/download)
+
+# To containerize the application install
+- Docker (https://docs.docker.com/docker-hub/)
+
+# To run the Postgres database, run inside the Docker
+$ docker run --name database -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
+
+# To view the data in the database, install
+- Postbird(https://www.electronjs.org/apps/postbird)
 ```
 
 ## :file_folder: Folder structure
@@ -125,3 +115,12 @@ $ yarn or npm start
 └── yarn.lock
 
 
+---
+
+Made with ♥ by Ivo Junior :wave: [Get in touch!](https://www.linkedin.com/in/jos%C3%A9-ivo-maciel-j%C3%BAnior-658136145/)
+
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
+[vc]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint

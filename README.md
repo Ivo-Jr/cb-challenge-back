@@ -1,7 +1,7 @@
 <h1 align="center" style="    max-width: 250px;
     margin: 30px 0;">
     <br>
-    Curso Beta &nbsp; :U+1F4DA:
+    Curso Beta &nbsp; &#128218
 </h1>
 
 

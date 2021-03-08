@@ -23,6 +23,8 @@ This project was developed with the following technologies:
 
 - [NodeJs](https://nodejs.org/en/)
 - [Docker](https://hub.docker.com/_/postgres)
+- [Postbird](https://www.electronjs.org/apps/postbird)
+- [Insominia](https://insomnia.rest/download)
 - [Yup](https://reactjs.org/)
 - [Multer](https://www.npmjs.com/package/multer)
 - [Sequelie](https://sequelize.org/master/manual/getting-started.html)
@@ -31,7 +33,7 @@ This project was developed with the following technologies:
 
 ## :information_source: How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v12.18.4][nodejs] or higher + [Yarn v1.22][yarn] or higher installed on your computer. From your command line:
 
 
 
@@ -53,9 +55,6 @@ $ git clone https://github.com/Ivo-Jr/cb-challenge.git
 
 # Go into the repository
 $ cd cd-challenge
-
-# Install dependencies
-$ yarn or npm install
 
 # Install dependencies 
 $ yarn or npm install

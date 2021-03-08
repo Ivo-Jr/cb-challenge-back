@@ -119,20 +119,7 @@ $ docker run --name database -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgre
 
 ```
 
-## :sunny: Result
 
-  <div style="display: flex;   flex-direction: column;
-  align-items: center;">
-  <h1 align="center" style="display: flex; flex-direction:row;">
-      <img   style="margin: 0 10px;" alt="quero-bolsa-app-img" src="src/assets/img/project-screen-shot.png" />
-        <img   style="margin: 0 10px;" alt="quero-bolsa-app-img" src="src/assets/img/project-screen-shot-2.png" />
-
-  </h1>
-  <h1 align="center" style="display: flex; flex-direction:row;">
-      <img  style="margin: 0 10px;" alt="quero-bolsa-app-img" src="src/assets/img/project-screen-shot-3.png" />
-      <img  style="margin: 0 10px;" alt="quero-bolsa-app-img" src="src/assets/img/project-screen-shot-4.png" />
-  </h1>
-  </div>
 
 
 

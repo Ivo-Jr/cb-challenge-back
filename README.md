@@ -54,16 +54,16 @@ $ yarn or npm start
 
 ```bash
 # To monitor the handling of requests and responses, Install:
-- Insomina(https://insomnia.rest/download)
+- [Insomina](https://insomnia.rest/download)
 
 # To containerize the application install
-- Docker (https://docs.docker.com/docker-hub/)
+- [Docker](https://docs.docker.com/docker-hub/)
 
 # To run the Postgres database, run inside the Docker
 $ docker run --name database -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
 
 # To view the data in the database, install
-- Postbird(https://www.electronjs.org/apps/postbird)
+- [Postbird](https://www.electronjs.org/apps/postbird)
 ```
 
 ## :file_folder: Folder structure

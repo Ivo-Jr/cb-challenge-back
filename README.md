@@ -6,7 +6,7 @@
 
 
 <h4 align="center">
-  An Interface that helps you navigate the largest school of judicial experts - (https://www.cursobeta.com.br/)
+  An API that helps you navigate the largest school of judicial experts - (https://www.cursobeta.com.br/)
 </h4>
 
 <p align="center">

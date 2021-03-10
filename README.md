@@ -49,7 +49,7 @@ $ cd cd-challenge
 $ yarn or npm install
 
 # Run the app
-$ yarn or npm start
+$ yarn dev
 ```
 
 

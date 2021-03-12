@@ -25,7 +25,7 @@ This project was developed with the following technologies:
 - [Docker](https://hub.docker.com/_/postgres)
 - [Postbird](https://www.electronjs.org/apps/postbird)
 - [Insominia](https://insomnia.rest/download)
-- [Yup](https://reactjs.org/)
+- [Yup](https://github.com/jquense/yup)
 - [Multer](https://www.npmjs.com/package/multer)
 - [Sequelie](https://sequelize.org/master/manual/getting-started.html)
 - [Prettier](https://prettier.io/)
